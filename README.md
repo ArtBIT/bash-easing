@@ -39,6 +39,19 @@ ease quad_in_out 0.3 100 200    - would return 118
 ease quad_in_out 0.5 100 200    - would return 150 (all in_out methods, for VALUE 0.5, return arithmetic mean of FROM,TO - (FROM+TO)/2)
 ```
 
+## Testing
+
+To do a rough plot of a easing method, run the following
+```bash
+ease_debug METHOD
+
+# i.e.
+ease_debug quad_in
+ease_debug quint_out
+# etc.
+```
+
+
 # License
 
 [MIT](LICENSE.md)
