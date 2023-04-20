@@ -89,19 +89,25 @@ function ease_debug {
     STEPS=100
     tput clear
 
-    for (( y=0; y<$HEIGHT; y++)); do
+    for (( y=1; y<$HEIGHT; y++)); do
         xy_echo 0 $y "|"
     done
     for (( x=0; x<$WIDTH; x++)); do
-        xy_echo $x $HEIGHT "-"
+        xy_echo $x $HEIGHT "_"
     done
+
+    xy_echo 0 $HEIGHT "L"
 
     for (( i=1; i<$STEPS; i++)); do
         t=$(math "$i/$STEPS")
-        x=$(math "($t*$WIDTH)/1" "scale=0;")
         v=$(ease_$EASING_METHOD $t)
-        y=$(math "$HEIGHT-($v*$HEIGHT)/1" "scale=0;")
-        xy_echo $x $y "x"
+
+        x=$(math "$t*$WIDTH")
+        ix=$(math "$x/1 + 1" "scale=0;")
+        y=$(math "$HEIGHT-($v*$HEIGHT)")
+        iy=$(math "$y/1 + 1" "scale=0;")
+
+        xy_echo $ix $iy "·"
     done
 
     tput cup $((HEIGHT+2)) 0

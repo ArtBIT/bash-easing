@@ -3,6 +3,10 @@
 
 Simple exponential easing functions written in bash + bc
 
+# Demo
+
+<a href="https://asciinema.org/a/LfF5iCkuhzhlDRGd07W6yJmCq"><img src="https://raw.githubusercontent.com/ArtBIT/bash-easing/master/assets/poster.png" width="200" /></a>
+
 # Installation
 
 ## Manually
