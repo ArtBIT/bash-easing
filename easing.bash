@@ -82,7 +82,7 @@ function xy_echo {
     echo "$3"
 }
 
-function debug {
+function ease_debug {
     EASING_METHOD="$1"
     WIDTH=50
     HEIGHT=25
