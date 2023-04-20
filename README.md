@@ -27,9 +27,16 @@ ease METHOD VALUE FROM TO
 
 To linearly ease a value from 100 to 200:
 
+ease linear 0 100 200           - would return the start value 100
+ease linear 1 100 200           - would return the end value 200
+ease linear 0.5 100 200         - would return a value between the 100 and 200, which is 150
+
 ease quad_in_out 0 100 200      - would return the start value 100
 ease quad_in_out 1 100 200      - would return the end value 200
-ease quad_in_out 0.5 100 200    - would return a value between the 100 and 200, which is 150
+ease quad_in_out 0.1 100 200    - would return 102
+ease quad_in_out 0.2 100 200    - would return 108
+ease quad_in_out 0.3 100 200    - would return 118
+ease quad_in_out 0.5 100 200    - would return 150 (all in_out methods, for VALUE 0.5, return arithmetic mean of FROM,TO - (FROM+TO)/2)
 ```
 
 # License
